@@ -1,0 +1,63 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.houseGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.card {
+  display: grid;
+  place-items: start;
+}
+.card__title,
+.card__img {
+  grid-area: 1/1;
+}
+.card__title {
+  z-index: 1;
+  color: white;
+  background-color: #333;
+  margin: 0;
+  padding: 0.6em, 1.2em;
+}
+.card__img {
+  max-width: 100%;
+}
+
+.team__title,
+.team__occupation {
+  margin: 0.7em, 0;
+}
+.team__occupation {
+  color: gray;
+}
+.teamItem {
+  display: flex;
+  flex-direction: column;
+}
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.team__img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .houseGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  .houseGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .teamGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
